@@ -1,0 +1,93 @@
+@import '../../mixins.scss';
+.header{
+    height: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #000000;
+    // background:var(--gradient3);
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+    @include sm{
+        height: 30px;
+    }
+    .logo{
+        align-items: center;
+        height: 100%;
+        display: flex;
+        margin:0 10px;
+        cursor: pointer;
+    }
+    .menu{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        .menuItems{
+            align-items: center;
+            padding: 0 20px 0 0;
+            list-style-type: none;
+            cursor: pointer;
+            color: white;
+            @include sm{
+                display: none;
+            }
+        }
+        .menuItems:hover{
+            color: black;
+        }
+        .icons{
+            color: white;
+            margin: 0 5px;
+            border-radius: 10px;
+            @include sm{
+                display: none;
+            }
+            
+        }
+        .searchIcon{
+            display: none;
+            @include sm{
+                display: block;
+            }
+        }
+    }
+    
+    .mobileMenu{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        z-index: 3;
+        box-sizing: border-box;
+        background:var(--gradient3);
+        .mobileMenuItems{
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            height: 30px;
+            border-color: black;
+            border-bottom: 1px solid;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .mobileMenuItems:hover{
+            background:var(--gradient4)
+        }
+        .closeIcon{
+            width: 100%;
+            text-align: end;
+            border-bottom: 1px solid;
+        }
+        .closeIcon:hover{
+            color: black
+        }
+        @include sm{
+            display: flex;
+        }
+    }
+}

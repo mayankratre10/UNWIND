@@ -1,9 +1,12 @@
 import React from 'react'
-import Banner from'./banner/banner'
-import './styles.scss'
+import Banner from './banner/banner'
+import ContentSection from '../../components/contentSection/contentSection'
 const home = () => {
   return (
-    <Banner/>
+    <div>
+      <Banner/>
+      <ContentSection/>
+    </div>
   )
 }
 
