@@ -2,7 +2,6 @@ import axios from 'axios'
 axios.defaults.baseURL=import.meta.env.VITE_SERVER_URL
 
 export const fetchApiData = async(url)=>{
-    
     const data=await axios.get(url);
     return data;
 }
