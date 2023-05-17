@@ -1,33 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchApiData } from '../utils/api'
 
 const initialState = {
-  now_playing:0
-  // upcoming:[],
-  // top_rated:[],
-  // popular:[]
+  now_playing:[],
+  upcoming:[],
+  top_rated:[],
+  popular:[]
 }
 
 export const movieByType = createSlice({
   name: 'movieByType',
   initialState,
   reducers: {
-    fetchMovies:async (state,action)=>{
-      // await fetchApiData('/movie/'+action.payload)
-      //   .then((res)=>console.log(res));
-      state.now_playing=action.payload;
-      // console.log(action.payload)
-      // switch(action.payload){
-      //   case "now_playing":state.now_playing=data.data;break;
-      //   case "top_rated":state.top_rated=data.data;break;
-      //   case "upcoming":state.upcoming=data.data;break;
-      //   case "popular":state.popular=data.data;break;
-      //   default:console.log(action.payload);
-      // }
-      // state.now_playing=data.data;
+    store_nowMovies:(state,action)=>{
+      state.now_playing=action.payload
+    },
+    store_topMovies:(state,action)=>{
+      state.top_rated=action.payload
+    },
+    store_upcomingMovies:(state,action)=>{
+      state.upcoming=action.payload
+    },
+    store_popularMovies:(state,action)=>{
+      state.popular=action.payload
     }
   },
 })
-export const {fetchMovies} = movieByType.actions
+export const {store_nowMovies,store_popularMovies,store_topMovies,store_upcomingMovies} = movieByType.actions
 
 export default movieByType.reducer
