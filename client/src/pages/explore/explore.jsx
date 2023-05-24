@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import { fetchGenreList } from "../../utils/api";
 import ExploreSection from "../exploreSection/exploreSection"
-const movie = ({tittle}) => {
+const explore = ({tittle}) => {
   const [loading, setloading] = useState(false);
   const [genreList, setGenreList] = useState(null);
   useEffect(() => {
@@ -11,16 +11,14 @@ const movie = ({tittle}) => {
     }).catch((err)=>{
       console.log(err.message)
     })
-  }, []);
+  }, [tittle]);
   useEffect(()=>{
     setloading(true);
   },[genreList])
   return (
     <>
-    <h1>{tittle}</h1>
       {genreList  && (
         <div className="filterBanner">
-          <h1 className="heading">All {tittle} With Genres</h1>
           {genreList && <ExploreSection tittle={tittle} genreList={genreList} />}
         </div>
       )}
@@ -29,4 +27,4 @@ const movie = ({tittle}) => {
   );
 };
 
-export default movie;
+export default explore;

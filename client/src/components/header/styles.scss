@@ -5,7 +5,6 @@
     width: 100%;
     justify-content: space-between;
     color: #000000;
-    // background:var(--gradient3);
     position: absolute;
     z-index: 2;
     background: rgba(0, 0, 0, 0.25);
@@ -20,6 +19,12 @@
         display: flex;
         margin:0 10px;
         cursor: pointer;
+        color: white;
+        font-style: oblique;
+        font-size: larger;
+    }
+    .logo:hover{
+        color: rgb(129, 129, 129);
     }
     .menu{
         height: 100%;
@@ -52,6 +57,7 @@
         .searchIcon{
             display: none;
             @include sm{
+                color: white;
                 display: block;
             }
         }

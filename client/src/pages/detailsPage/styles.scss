@@ -1,0 +1,244 @@
+@import '../../mixins.scss';
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+.container{
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    @include sm{
+        padding-top: 40px;
+    }
+    .banner{
+        color: black;
+        margin: 0 2% 2% 2%;
+        padding: 5%;
+        height: 100vh;
+        width: 96%;
+        background: var(--detailGradient);
+        border-radius: 20px;
+        display: flex;
+        @include sm{
+            flex-direction: column;
+        }
+        .background{
+            z-index: 0;
+            opacity: .5;
+        }
+        .opacityLayer{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--detailbanner);
+            z-index: 1;
+            opacity: .9;
+        }
+        .poster{
+            z-index: 2;
+            width: 300px;
+            background-color: white;
+            background-image: url('../../assets//images/loading.jpg');
+            background-size:cover;
+            height: 100%;
+            border-radius: 20px;
+            @include lg{
+                width: 250px;
+                height: 80%;
+            }
+            @include md{
+                width: 250px;
+                height: 70%;
+            }
+            @include sm{
+                width: 70%;
+                height: 300px;
+            }
+            @include xsm{
+                width: 70%;
+                height: 300px;
+            }
+            .lazy-load{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+        }
+        .details{
+            z-index: 2;
+            padding: 10px;
+            width: calc(100% - 300px);
+            color: white;
+            margin-left: 3%;
+            height: 100%;
+            border-radius: 10px;
+            @include lg{
+                height: 80%;
+            }
+            @include md{
+                width: calc(100% - 250px);
+                margin-left: 2%;
+                height: 70%;
+            }
+            @include sm{
+                width: 100%;
+                margin-top: 1rem;
+            }
+            @include xsm{
+                width: 100%;
+
+            }
+            .heading{
+                font-size: large;
+                font-weight: 500;
+            }
+            .overview{
+                font-size: small;
+                color: rgb(155, 156, 156);
+            }
+            .rating{
+                display: flex;
+                margin: 1rem 0;
+                p{
+                    text-align: center;
+                    margin-left: 1rem;
+                    color: rgb(242, 247, 0);
+                    border-radius: 10px;
+                    width: 4rem;
+                    height: 1.5rem;
+                    background: var(--detailGradient);
+                }
+            }
+            .genre{
+                color: rgb(155, 156, 156);
+                display: flex;
+                width: 100%;
+                margin: 1rem 0;
+                .genreItem{
+                    font-size: small;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    background: var(--detailGradient);
+                    margin-right: 1rem;
+                    border-radius: 10px;
+                }
+            }
+            .status{
+                color: rgb(155, 156, 156);
+            }
+            .trailerButton{
+                margin: 2rem;
+                width: 10rem;
+                height: 2rem;
+                font-size: 2rem;
+                cursor: pointer;
+                color: rgb(175, 255, 25);
+                &:hover {
+                    color: rgb(155, 156, 156);
+                }
+            }
+        }
+    }
+    .cardOverride{
+        width: 200px;
+        height: 300px;
+        background-color: wheat;
+        max-width: 200px;
+        margin: 10px 20px 10px 20px;
+        display: inline-block;
+        position: relative;
+        transition: all ease 0.5s;
+        border-radius: 5px;
+        box-shadow: 0 0 .5rem rgb(97, 97, 97);
+        &:hover {
+            box-shadow: 0 0 1rem white;
+            color: var(--dark);
+            transition: all ease .5s;
+            .rating{
+                transition: all ease 1s;
+                background: rgb(255, 255, 255);
+                border: 4px solid rgb(53, 189, 40);
+                border-style: groove;
+                color: rgb(0, 75, 71);
+                height: 50px;
+                width: 50px;
+                box-shadow: 0 0 2rem green;
+                @include md{
+                    height: 45px;
+                    width: 45px;
+                }
+                @include sm{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+        .lazy-load{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            // display: none;
+        }
+        .rating{
+            margin:5px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 5px solid rgb(53, 189, 40);
+            border-style: groove;
+            position: absolute;
+            bottom: 0;
+            color: rgb(0, 0, 0);
+            background:rgb(255, 255, 255);
+            height: 40px;
+            width: 40px;
+            font-weight: 700;
+            font-size: 18px;
+            @include md{
+                font-size: 15px;
+                height: 35px;
+                width: 35px;
+                border: 3px solid rgb(53, 189, 40);
+                border-style: groove;
+            }
+            @include sm{
+                border: 2px;
+                height: 30px;
+                width: 30px;
+                font-size: 10px;
+                border: 2px solid rgb(53, 189, 40);
+                border-style: groove;
+            }
+        }
+        @include lg{
+            justify-content: space-between;
+            height: 300px;
+            width: 200px;
+        }
+        @include md{
+            justify-content: space-between;
+            width: 180px;
+            height: 250px;
+        }
+        @include sm{
+            justify-content: space-between;
+            width: 140px;
+            height: 200px;
+        }
+        @include xsm{
+            width: 100px;
+            height: 140px;
+        }
+    }    
+    .similar{
+        width: 100%;
+        padding-left: 10%;
+        font-size: 20px;
+    }
+    .movieList{
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

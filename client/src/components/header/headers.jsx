@@ -6,6 +6,7 @@ import { MdOutlineManageSearch } from "react-icons/md";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { RiMovie2Fill } from "react-icons/ri";
 import { IoTvSharp } from "react-icons/io5";
+import logo from '../../assets/images/logo2.png'
 const headers = () => {
   const navigate=useNavigate();
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -21,7 +22,7 @@ const headers = () => {
 
   return (
     <div className="header">
-      <div className="logo" onClick={()=>navigate('/')}>LOGO</div>
+      <img className="logo" src={logo} onClick={()=>navigate('/')}/>
       <ul className="menu">
         <RiMovie2Fill className="icons"/><li className="menuItems" onClick={()=>redirector("movie")}>Movies</li>
 

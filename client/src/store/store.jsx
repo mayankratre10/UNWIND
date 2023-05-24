@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import movieByTypeReducer from './movieTypeSlice'
+import searchReducer from './searchSlice'
 
 export const store = configureStore({
   reducer: {
-    movieByType: movieByTypeReducer,
+    search:searchReducer
   },
 })
