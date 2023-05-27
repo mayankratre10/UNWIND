@@ -9,10 +9,10 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movie" element={<Explore tittle={"movie"}/>} />
-        <Route path="/tvshow" element={<Explore tittle={"tv"}/>} />
-        <Route path="/details/:id" element={<Details/>} />
+        <Route path="/UNWIND/" element={<Home />} />
+        <Route path="/UNWIND/movie" element={<Explore tittle={"movie"}/>} />
+        <Route path="/UNWIND/tvshow" element={<Explore tittle={"tv"}/>} />
+        <Route path="/UNWIND/details/:id" element={<Details/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

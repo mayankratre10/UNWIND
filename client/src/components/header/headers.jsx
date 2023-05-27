@@ -17,12 +17,12 @@ const headers = () => {
     setMobileMenu(false);
   };
   const redirector= (destination)=>{
-    navigate('/'+destination);
+    navigate('/UNWIND/'+destination);
   }
 
   return (
     <div className="header">
-      <img className="logo" src={logo} onClick={()=>navigate('/')}/>
+      <img className="logo" src={logo} onClick={()=>navigate('/UNWIND/')}/>
       <ul className="menu">
         <RiMovie2Fill className="icons"/><li className="menuItems" onClick={()=>redirector("movie")}>Movies</li>
 
