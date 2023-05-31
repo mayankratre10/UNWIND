@@ -6,12 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer">
                 <div className="infoText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    Hey, MySelf Mayank A full Stack MERN developer, I creted this site for search your favourite movies and tv shows and get the details. Currently I am open to work on projects based on React, MonogoDB, Express, Node, Redux etc. You can find me in UPWORK for your work as Mayank Ratre MERN developer.Thank you for visiting.
                 </div>
                   
                 <div className="socialIcons">

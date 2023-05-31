@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/UNWIND/" element={<Home />} />
+        <Route path="/UNWIND" element={<Home />} />
         <Route path="/UNWIND/movie" element={<Explore tittle={"movie"}/>} />
         <Route path="/UNWIND/tvshow" element={<Explore tittle={"tv"}/>} />
         <Route path="/UNWIND/details/:id" element={<Details/>} />
