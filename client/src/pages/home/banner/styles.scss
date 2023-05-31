@@ -72,7 +72,8 @@
                 }
                 @include sm{
                     font-size: 10px;
-                    width: 75%;
+                    width: 70%;
+                    height: 50%;
                 }
             }
             input::placeholder{
@@ -96,8 +97,9 @@
                     font-size: 15px;
                 }
                 @include sm{
-                    width: 25%;
+                    width: 30%;
                     font-size: 10px;
+                    height: 50%;
                 }
 
             }
@@ -110,7 +112,7 @@
     }
     .opacityLayer{
         width: 100%;
-        height: 250px;
+        height: 230px;
         background: linear-gradient(
             180deg,
             rgba(4, 21, 45, 0) 0%,
@@ -121,13 +123,13 @@
         left: 0;
         z-index: 2;
         @include md{
-            height: 200px;
+            height: 120px;
         }
         @include sm{
-            height: 150px;
+            height: 30%;
         }
         @include xsm{
-            height: 100px;
+            height: 30%;
         }
 
     }
