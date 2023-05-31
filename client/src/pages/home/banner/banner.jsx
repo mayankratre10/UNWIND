@@ -37,7 +37,7 @@ const banner = ({setFlag,setSearchInput}) => {
           <span className="tittle">Welcome</span>
           <span className="tittle">Millions of TV Shows and Movies</span>
           <div className="searchInput">
-            <input type="text" placeholder="Search Movies and TV shows" onChange={(e)=>handleChange(e)} />
+            <input type="text" placeholder="Search Movies and TV shows" onChange={(e)=>handleChange(e)} onKeyDown={(e)=>{if(e.key==="Enter"){handleOnclick()}}} />
             <button onClick={()=>handleOnclick()}>Search</button>
           </div>
         </div>
