@@ -55,11 +55,15 @@ const details = (props) => {
             })}
             </div>
             <p className="overview">{details.overview}</p>
-            
+
             <span className="rating">Rating:<p >{details.vote_average.toFixed(1)}</p></span>
+            
+            <span className="contain">
+              
             <span className="status">Status: {details.status}</span>
             {videoList && videoList[0] && <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={videoList[0].key} onClose={() => setOpen(false)} />}
 			      <span className="trailerButton" onClick={()=> setOpen(true)}><HiPlay/> Watch Trailer</span>
+            </span>
           </div>
         )} 
       </div>

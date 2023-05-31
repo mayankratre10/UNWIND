@@ -18,6 +18,7 @@
         display: flex;
         @include sm{
             flex-direction: column;
+            height: calc(100vh + 100px);
         }
         .background{
             z-index: 0;
@@ -97,6 +98,7 @@
             .rating{
                 display: flex;
                 margin: 1rem 0;
+                
                 p{
                     text-align: center;
                     margin-left: 1rem;
@@ -105,6 +107,18 @@
                     width: 4rem;
                     height: 1.5rem;
                     background: var(--detailGradient);
+                    @include sm{
+                        height: 1rem;
+                        width: 3rem;
+                    }
+                }
+                @include sm{
+                    margin: .5rem 0;
+                    font-size: 1rem;
+                }
+                @include xsm{
+                    margin: .25rem 0;
+                    font-size: .75rem;
                 }
             }
             .genre{
@@ -121,18 +135,40 @@
                     border-radius: 10px;
                 }
             }
-            .status{
-                color: rgb(155, 156, 156);
-            }
-            .trailerButton{
-                margin: 2rem;
-                width: 10rem;
-                height: 2rem;
-                font-size: 2rem;
-                cursor: pointer;
-                color: rgb(175, 255, 25);
-                &:hover {
+            .contain{
+                width: 100%;
+                .status{
                     color: rgb(155, 156, 156);
+                    @include xsm{
+                        font-size: .75rem;
+                        width: 3rem;
+                    }
+                }
+                .trailerButton{
+                    margin: 2rem;
+                    width: 10rem;
+                    height: 2rem;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: rgb(175, 255, 25);
+                    &:hover {
+                        color: rgb(155, 156, 156);
+                    }
+                    @include md{
+                        width: 8rem;
+                        font-size: 1.5rem;
+                        height: 1.5rem;
+                    }
+                    @include sm{
+                        width: 5rem;
+                        font-size: 1rem;
+                        height: 1rem;
+                        margin: 1rem ;
+                    }
+                    @include xsm{
+                        width: 3rem;
+
+                    }
                 }
             }
         }
