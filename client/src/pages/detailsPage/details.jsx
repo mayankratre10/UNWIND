@@ -67,7 +67,7 @@ const details = (props) => {
           </div>
         )} 
       </div>
-      <div className="similar">Recommended Movies On The Basis Of Above Movie</div>
+      <div className="similar">Recommended</div>
       <div className="movieList">
       {movieList && movieList.map((item, index) => {
         return <Card key={index} cardClass={"cardOverride"} details={item} />;
