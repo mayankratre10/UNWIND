@@ -6,13 +6,13 @@ import Explore from "./pages/explore/explore"
 import Details from "./pages/detailsPage/details"
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/UNWIND">
       <Header />
       <Routes>
-        <Route path="/UNWIND" element={<Home />} />
-        <Route path="/UNWIND/movie" element={<Explore tittle={"movie"}/>} />
-        <Route path="/UNWIND/tvshow" element={<Explore tittle={"tv"}/>} />
-        <Route path="/UNWIND/details/:id" element={<Details/>} />
+        <Route path="" element={<Home />} />
+        <Route path="/movie" element={<Explore tittle={"movie"}/>} />
+        <Route path="/tvshow" element={<Explore tittle={"tv"}/>} />
+        <Route path="/details/:id" element={<Details/>} />
       </Routes>
       <Footer />
     </HashRouter>
