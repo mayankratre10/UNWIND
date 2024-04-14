@@ -6,7 +6,7 @@ import Explore from "./pages/explore/explore"
 import Details from "./pages/detailsPage/details"
 function App() {
   return (
-    <HashRouter basename="/">
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/UNWIND" element={<Home />} />
